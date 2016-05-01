@@ -1,0 +1,40 @@
+Using plugin:
+	BeautifulSoup2 剖析html
+	requests       get,post
+
+
+
+requests:
+	res=requests(網站網址)		server會回傳相應的html
+
+->丟給beautifulSoup剖析
+
+code = BeautifulSoup(res)
+
+code.select(‘標籤名’)	回傳list		
+
+利用迴圈取出
+
+for item in code.select(’標籤’):
+	print item.contents    #包含標籤
+	print item.text        #只有內文
+
+標籤：
+class 前加.
+id    前加#
+
+
+
+
+
+
+
+web knowledge:
+	get 只有網址
+	get(web)
+	post 包含一些val內容 放在payload中
+		payload 用字典儲存
+	post(web,data=payload)
+
+
+
