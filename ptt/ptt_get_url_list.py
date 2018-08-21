@@ -17,7 +17,7 @@ from types import *
 loop=100
 
 #tag='Grad-ProbAsk'
-#tag='joke'
+#tag='sex'
 #tag='graduate'
 tag ='Gossiping'
 #tag='Baseball'
@@ -76,6 +76,7 @@ def get_essay_list(*arg):
           tarlist.extend(ptt_get_pusher.get_pusher(url,rs,target))
         else:
           essayinfo=ptt_get_essay.get_essayinfo(url,rs)
+          ptt_print.print_essay(essayinfo)
           tarlist.append(essayinfo)
 
         #ptt_print_essay.print_essay(essayinfo)
@@ -90,7 +91,7 @@ def get_essay_list(*arg):
     #cause of 503 nginx
     if len(bdurlist)==0:
       print code.text
-      sleep(0.5)
+      #sleep(0.3)
       continue
 
     #url is the earliest one
@@ -134,10 +135,13 @@ def print_all_essay(essaylist):
       ptt_print.print_essayinfo(item)
 
 if __name__=='__main__':
-  #get_essay_list('amge1524',1)
+  #1 for push
+  #2 for essay
+
+  #get_essay_list('aurora030181',1)
   #get_essay_list('jerry031181',1)
-  get_essay_list('prosperous',1)
+  #get_essay_list('prosperous',1)
   #get_essay_list('obov',1)
   #get_essay_list('eagle1128',1)
-  #get_essay_list('xxtuoo',1)
+  get_essay_list('Cathay',2)
   #get_essay_list()
